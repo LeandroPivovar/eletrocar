@@ -1,36 +1,35 @@
-# Eletrocar - site institucional
+# Eletrocar Auto Elétrica e Ar Condicionado - site institucional
 
-Site one-page da **Eletrocar**: elétrica automotiva e ar-condicionado automotivo em Lucas do Rio Verde - MT.
+Site one-page da **Eletrocar**: auto elétrica e ar-condicionado para carros, caminhões, tratores e máquinas agrícolas em Lucas do Rio Verde - MT. Slogan: "Seu carro em boas mãos."
 
 ## Estrutura
 
 ```
-index.html   # página única (hero, sobre, serviços, ar-condicionado, depoimentos, mapa, FAQ)
-styles.css   # estilos (tema claro/escuro automático, azul elétrico)
-script.js    # link do WhatsApp, menu mobile, header, animações, carrossel, FAQ
-assets/      # favicon e fotos
+index.html   # página única (hero, sobre, serviços, galeria, ar-condicionado, depoimentos, mapa, FAQ)
+styles.css   # estilos (tema claro/escuro automático, vermelho da marca)
+script.js    # link do WhatsApp, menu mobile, header, animações, galeria ampliada, carrossel, FAQ
+assets/      # logo, favicon, fotos e posts
 ```
 
 Sem build: HTML, CSS e JS puros. Publique a pasta em GitHub Pages, Netlify, Vercel ou hospedagem comum.
 
-## Dados usados (perfil do WhatsApp Business)
+## Dados usados (posts da empresa)
 
-- Telefone/WhatsApp: +55 65 9229-5010 (`wa.me/556592295010`, constante `WHATSAPP` no `script.js`)
-- Horário: 09:00 às 18:00
-- Endereço: Avenida Anelo Antônio Dall Alba, Cerrado, Lucas do Rio Verde - MT, 78455-000
-- Slogan: "Confiança e qualidade."
+- Telefone/WhatsApp: (65) 99229-5010 (`wa.me/5565992295010`, constante `WHATSAPP` no `script.js`)
+- Endereço: Av. Ângelo Antônio Dall'Alba, 2742-S, Bairro Veneza, ao lado da pista de bicicross, Lucas do Rio Verde - MT
+- Horário: 09:00 às 18:00 (perfil do WhatsApp Business)
 
 O botão da seção de ar-condicionado abre o WhatsApp com uma mensagem própria (atributo `data-msg`).
 
 ## Antes de publicar
 
-- **Serviços**: confirme a lista (elétrica, ar-condicionado, bateria/alternador/partida, iluminação e acessórios) e ajuste se preciso.
-- **Número do endereço**: o perfil não informa o número na avenida. Se tiver, inclua no endereço e no mapa.
-- **Dias de atendimento**: o perfil mostra só o horário (9h às 18h). Informe os dias da semana, se quiser exibir.
+- **Endereço**: o perfil do WhatsApp mostrava "Avenida Anelo Antônio Dall Alba, Cerrado" e o post de revisão elétrica mostra "Av. Ângelo Antônio Dal'alba, 2742s, Bairro Veneza". O site usa o do post. Confirme o bairro e o número, e se o mapa aponta para o lugar certo.
+- **Dias de atendimento**: só o horário é conhecido (9h às 18h).
 - **Depoimentos** são exemplos. Substitua por avaliações reais de clientes.
-- **FAQ**: confirme cobrança do diagnóstico, tipos de veículo e formas de pagamento.
-- **Logo**: a empresa não tem logo no perfil. O cabeçalho usa um selo azul com raio.
+- **FAQ**: confirme cobrança do diagnóstico e formas de pagamento.
 
-## Créditos das imagens
+## Imagens
 
-Fotos via [Unsplash](https://unsplash.com) (licença Unsplash).
+- `logo.png`, `favicon.png` (recorte do emblema do logo), `oficina-1.jpg`, `oficina-2.jpg`, `cabecote.jpg` (recorte do post de cabeçote) e `posts/`: material da própria empresa.
+- `hero.jpg`, `eletrica.jpg`, `ar.jpg`, `bateria.jpg`, `farol.jpg`, `climatizador.jpg`: [Unsplash](https://unsplash.com) (licença Unsplash).
+- Os posts "Bom dia" e "Estamos contratando" não entraram no site.

@@ -1,6 +1,6 @@
 // ===== Configuração de contato =====
 // Número do WhatsApp Business (DDI + DDD + número, só dígitos)
-const WHATSAPP = "556592295010";
+const WHATSAPP = "5565992295010";
 const WA_MSG = "Olá, Eletrocar! Gostaria de agendar um serviço.";
 
 // Cada link pode ter sua mensagem própria em data-msg (ex.: botão da seção de ar-condicionado)
@@ -64,6 +64,32 @@ document.querySelectorAll("[data-scroll]").forEach((btn) =>
     track.scrollBy({ left: step * Number(btn.dataset.scroll), behavior: "smooth" });
   })
 );
+
+// ===== Galeria: imagem ampliada com setas, teclado e Esc =====
+const box = document.querySelector(".lightbox");
+const shots = [...document.querySelectorAll(".gallery [data-full]")];
+if (box && shots.length && typeof box.showModal === "function") {
+  const boxImg = box.querySelector(".lightbox__img");
+  const boxCap = box.querySelector(".lightbox__caption");
+  let current = 0;
+  const show = (i) => {
+    current = (i + shots.length) % shots.length;
+    const thumb = shots[current].querySelector("img");
+    boxImg.src = shots[current].dataset.full;
+    boxImg.alt = thumb.alt;
+    boxCap.textContent = thumb.alt;
+  };
+  shots.forEach((btn, i) => btn.addEventListener("click", () => { show(i); box.showModal(); }));
+  box.querySelector(".lightbox__close").addEventListener("click", () => box.close());
+  box.querySelector(".lightbox__prev").addEventListener("click", () => show(current - 1));
+  box.querySelector(".lightbox__next").addEventListener("click", () => show(current + 1));
+  box.addEventListener("click", (e) => { if (e.target === box) box.close(); });
+  box.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowLeft") show(current - 1);
+    if (e.key === "ArrowRight") show(current + 1);
+  });
+  box.addEventListener("close", () => boxImg.removeAttribute("src"));
+}
 
 // ===== FAQ: abre um por vez =====
 const items = document.querySelectorAll(".faq__list details");
